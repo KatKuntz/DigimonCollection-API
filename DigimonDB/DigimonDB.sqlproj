@@ -60,5 +60,6 @@
   <ItemGroup>
     <Build Include="Set.sql" />
     <Build Include="Card.sql" />
+    <Build Include="Printing.sql" />
   </ItemGroup>
 </Project>
