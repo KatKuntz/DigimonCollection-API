@@ -10,5 +10,5 @@
     CONSTRAINT [CK_Card_Color] CHECK (Color IN ('Red','Yellow','Blue','Green','Purple','Black','White')),
     CONSTRAINT [CK_Card_Type] CHECK (Type IN ('Option','Tamer','Digimon','Digi-Egg')),
     CONSTRAINT [PK_Card] PRIMARY KEY ([Id]),
-    CONSTRAINT [AK_Card_SetNumber] UNIQUE ([SetId],[Number])
+    CONSTRAINT [UQ_Card_SetNumber] UNIQUE ([SetId],[Number])
 )
