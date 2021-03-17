@@ -1,4 +1,4 @@
-﻿namespace CardManager.DAL.Set
+﻿namespace CardManager.DAL
 {
     interface ISetDAO
     {
