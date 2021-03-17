@@ -1,6 +1,7 @@
 ﻿namespace CardManager.DAL.Set
 {
-    class ISetDAO
+    interface ISetDAO
     {
+        
     }
 }
