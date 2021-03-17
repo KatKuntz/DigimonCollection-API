@@ -22,7 +22,7 @@ namespace CardManager.DAL
                            "VALUES (@name, @releaseDate); " +
                            "SELECT CAST(SCOPE_IDENTITY() as Int);";
             
-            SqlCommand cmd = new SqlCommand(query, conn);
+            using SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@name", set.Name);
             cmd.Parameters.AddWithValue("@releaseDate", set.ReleaseDate);
 
