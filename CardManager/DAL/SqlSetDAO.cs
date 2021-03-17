@@ -20,14 +20,13 @@ namespace CardManager.DAL
 
             string query = "INSERT INTO [dbo].[Set](Name, ReleaseDate) " +
                            "VALUES (@name, @releaseDate); " +
-                           "SELECT SCOPE_IDENTITY();";
+                           "SELECT CAST(SCOPE_IDENTITY() as Int);";
             
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@name", set.Name);
             cmd.Parameters.AddWithValue("@releaseDate", set.ReleaseDate);
 
-            int newId = Convert.ToInt32(cmd.ExecuteScalar());
-            set.SetId = newId;
+            set.SetId = (int)cmd.ExecuteScalar();
         }
     }
 }

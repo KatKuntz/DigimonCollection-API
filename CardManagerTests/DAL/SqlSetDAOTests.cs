@@ -18,7 +18,7 @@ namespace CardManagerTests.DAL
             dao.AddSet(new Set()
             {
                 Name = "Test Set",
-                ReleaseDate = DateTime.Today
+                ReleaseDate = new DateTime(2021, 3, 17)
             });
 
             int finalRowCount = GetRowCount("Set");
@@ -33,7 +33,7 @@ namespace CardManagerTests.DAL
             Set newSet = new Set()
             {
                 Name = "Test Set",
-                ReleaseDate = DateTime.Now
+                ReleaseDate = new DateTime(2021, 3, 17)
             };
 
             dao.AddSet(newSet);
