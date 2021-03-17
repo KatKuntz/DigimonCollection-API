@@ -1,4 +1,4 @@
-﻿namespace CardManager.DAL.Card
+﻿namespace CardManager.DAL
 {
     interface ICardDAO
     {

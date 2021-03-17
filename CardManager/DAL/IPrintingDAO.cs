@@ -1,4 +1,4 @@
-﻿namespace CardManager.DAL.Printing
+﻿namespace CardManager.DAL
 {
     interface IPrintingDAO
     {
