@@ -61,7 +61,7 @@ namespace CardManagerTests.DAL
                 Assert.AreEqual(newCard.Type, (string)reader["Type"]);
             } else
             {
-                Assert.Fail();
+                Assert.Fail("Failed to read card from database");
             }
         }
     }

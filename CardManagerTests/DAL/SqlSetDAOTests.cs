@@ -54,7 +54,7 @@ namespace CardManagerTests.DAL
                 Assert.AreEqual(newSet.ReleaseDate, (DateTime)reader["ReleaseDate"]);
             } else
             {
-                Assert.Fail();
+                Assert.Fail("Failed to read set from database");
             }
         }
     }

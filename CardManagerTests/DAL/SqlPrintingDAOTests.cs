@@ -54,7 +54,7 @@ namespace CardManagerTests.DAL
             }
             else
             {
-                Assert.Fail();
+                Assert.Fail("Failed to read printing from database");
             }
         }
     }
