@@ -43,7 +43,7 @@ namespace CardManagerTests.DAL
 
             string query = "SELECT Id, Name, ReleaseDate FROM [dbo].[Set] WHERE Id=@id;";
 
-            SqlCommand cmd = new SqlCommand(query, conn);
+            using SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@id", newSet.SetId);
 
             using SqlDataReader reader = cmd.ExecuteReader();

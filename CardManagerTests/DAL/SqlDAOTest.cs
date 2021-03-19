@@ -12,6 +12,7 @@ namespace CardManagerTests.DAL
         private TransactionScope transaction;
 
         protected int TestSetId { get; private set; }
+        protected string TestCardId { get; private set; }
 
         [TestInitialize]
         public void InitTest()
@@ -39,6 +40,7 @@ namespace CardManagerTests.DAL
             if (reader.Read())
             {
                 TestSetId = (int)reader["testSetId"];
+                TestCardId = (string)reader["testCardId"];
             }
             else
             {
@@ -53,7 +55,7 @@ namespace CardManagerTests.DAL
 
             string query = $"SELECT COUNT(*) FROM [dbo].[{tableName}];";
 
-            SqlCommand cmd = new SqlCommand(query, conn);
+            using SqlCommand cmd = new SqlCommand(query, conn);
 
             return (int)cmd.ExecuteScalar();
         }

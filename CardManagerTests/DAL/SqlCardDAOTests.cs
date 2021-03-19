@@ -16,9 +16,9 @@ namespace CardManagerTests.DAL
             ICardDAO dao = new SqlCardDAO(connectionString);
             dao.AddCard(new Card()
             {
-                CardId = "TES-001",
+                CardId = "NEW-001",
                 SetId = TestSetId,
-                Name = "TestCard",
+                Name = "NewCard",
                 Color = "Red",
                 Type = "Tamer"
             });
@@ -34,9 +34,9 @@ namespace CardManagerTests.DAL
             ICardDAO dao = new SqlCardDAO(connectionString);
             Card newCard = new Card()
             {
-                CardId = "TES-001",
+                CardId = "NEW-001",
                 SetId = TestSetId,
-                Name = "TestCard",
+                Name = "NewCard",
                 Color = "Red",
                 Type = "Tamer"
             };
@@ -48,7 +48,7 @@ namespace CardManagerTests.DAL
 
             string query = "SELECT Id, SetId, Name, Color, Type FROM [dbo].[Card] WHERE Id = @id;";
 
-            SqlCommand cmd = new SqlCommand(query, conn);
+            using SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@id", newCard.CardId);
 
             using SqlDataReader reader = cmd.ExecuteReader();
