@@ -8,7 +8,7 @@ namespace CardManagerTests.DAL
 {
     public abstract class SqlDAOTest
     {
-        protected const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=DigimonDB;Integrated Security=true";
+        protected const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=testdigimondb;Integrated Security=true";
         private TransactionScope transaction;
 
         protected int TestSetId { get; private set; }
