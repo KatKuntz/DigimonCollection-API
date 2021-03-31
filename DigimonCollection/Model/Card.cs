@@ -6,6 +6,7 @@ namespace DigimonCollection.Model
     {
         public int Id { get; set; }
         public string CardNumber { get; set; }
+        public Color Color { get; set; }
 
         public int SetId { get; set; }
         public Set Set { get; set; }
