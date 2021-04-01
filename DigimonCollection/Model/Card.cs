@@ -12,7 +12,7 @@ namespace DigimonCollection.Model
         public string Name { get; set; }
         public string PrimaryEffect { get; set; }
         public string SecondaryEffect { get; set; }
-        
+
         public int? Level { get; set; }
         public int? PlayCost { get; set; }
         public int? EvoCost { get; set; }
