@@ -4,8 +4,8 @@ using System.Linq;
 
 namespace DigimonCollection.Controllers
 {
+    [Route("[controller]")]
     [ApiController]
-    [Route("[Controller]")]
     public class SetsController : ControllerBase
     {
         private readonly DigimonContext context;
@@ -19,6 +19,17 @@ namespace DigimonCollection.Controllers
         public ActionResult<IQueryable<Set>> GetSets()
         {
             return Ok(context.Sets);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Set> GetSetById(int id)
+        {
+            Set set = context.Sets.Find(id);
+            if (set == null)
+            {
+                return NotFound();
+            }
+            return Ok(set);
         }
     }
 }
