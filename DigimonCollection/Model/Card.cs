@@ -8,6 +8,7 @@ namespace DigimonCollection.Model
         public string CardNumber { get; set; }
         public Color Color { get; set; }
         public CardType Type { get; set; }
+        public Rarity Rarity { get; set; }
 
         public string Name { get; set; }
         public string PrimaryEffect { get; set; }
